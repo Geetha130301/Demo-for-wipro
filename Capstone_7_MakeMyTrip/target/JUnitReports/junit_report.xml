@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="18.053" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="filtering the hotels" name="finding the hotels" time="17.697">
+<system-out><![CDATA[
+Given I am on the Hotel search page.........................................passed
+Then I select the filters...................................................passed
+When I click on the searchbar...............................................passed
+Then I enter the hotel name.................................................passed
+Then I select the hotel.....................................................passed
+Then Iam on hotel pages.....................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="9.065" tests="6" skipped="0" failures="0" errors="0">
+<testcase classname="CRUD Operation on Jsonplaceholder application" name="Get all posts" time="4.054">
+<system-out><![CDATA[
+Given I have a base URI of "https://jsonplaceholder.typicode.com"...........passed
+When I send a Get request to "/posts".......................................passed
+Then the response status code should be 200.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="CRUD Operation on Jsonplaceholder application" name="Get One posts" time="0.241">
+<system-out><![CDATA[
+Given I have a base URI of "https://jsonplaceholder.typicode.com"...........passed
+When I send a Get request to "/posts/1".....................................passed
+Then the response status code should be 200.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="CRUD Operation on Jsonplaceholder application" name="Create post - #1.1" time="0.542">
+<system-out><![CDATA[
+Given I have a base URI of "https://jsonplaceholder.typicode.com"...........passed
+When I send a POST request to "/posts" with body as "{ \"title\": \"foo\", \"body\": \"bar\", \"userId\": 1 }".passed
+Then the response time is less than 5000....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="CRUD Operation on Jsonplaceholder application" name="Update a post - #1.1" time="0.95">
+<system-out><![CDATA[
+Given I have base URI of "https://jsonplaceholder.typicode.com".............passed
+When I send a PUT request to "/posts/1" with "{ \"id\": 1, \"title\": \"Updated Title\", \"body\": \"Updated body content\",\"userId\": 1  }".passed
+Then the response status code should be 200.................................passed
+And the response time is less than 5000.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="CRUD Operation on Jsonplaceholder application" name="Delete a post" time="0.995">
+<system-out><![CDATA[
+Given I have a base URI of "https://jsonplaceholder.typicode.com"...........passed
+When I send a DELETE request to "/posts/1"..................................passed
+Then the response status code should be 200.................................passed
+And the response time is less than 5000.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="CRUD Operation on Jsonplaceholder application" name="Patch post - #1.1" time="0.987">
+<system-out><![CDATA[
+Given I have base URI of "https://jsonplaceholder.typicode.com".............passed
+When I send a PATCH request to "/posts/ 1" with "{ \"title\": \"foo patched\" \"body\": \"bar\", \"userId\": 1 }".passed
+Then the response status code should be 200.................................passed
+And the response time is less than 5000.....................................passed
+]]></system-out>
+</testcase>
+</testsuite>
